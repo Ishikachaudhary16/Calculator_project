@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Calculator</title>
+</head>
+<body>
+ <div class="calc">
+
+  <input  id="display" readonly>
+   
+<div class="keys">
+ <button class="buttonb " onclick="appendToDisplay('+')" id="btn1">+</button>
+ <button class="button "onclick="appendToDisplay('7')" id="btn2">7</button>
+ <button class="button "onclick="appendToDisplay('8')" id="btn3">8</button>
+ <button class="button "onclick="appendToDisplay('9')" id="btn4">9</button>
+ <button class="buttonb "onclick="appendToDisplay('-')" id="btn5">-</button>
+ <button class="button "onclick="appendToDisplay('4')" id="btn6">4</button>
+ <button class="button "onclick="appendToDisplay('5')" id="btn7">5</button>
+ <button class="button "onclick="appendToDisplay('6')" id="btn8">6</button>
+ <button class="buttonb "onclick="appendToDisplay('*')" id="btn9">*</button>
+ <button class="button "onclick="appendToDisplay('1')" id="btn10">1</button>
+ <button class="button "onclick="appendToDisplay('2')" id="btn11">2</button>
+ <button class="button "onclick="appendToDisplay('3')" id="btn12">3</button>
+ <button class="buttonb "onclick="appendToDisplay('%')" id="btn13">%</button>
+ <button class="button " onclick="clearDisplay('C')"id="btn14">C</button>
+ <button class="button "onclick="appendToDisplay('0')" id="btn15">0</button>
+ <button class="button "onclick="calculate('=')" id="btn16">=</button>
+
+</div>
+
+ </div>
+ <script>
+    const display = document.getElementById("display")
+
+  function appendToDisplay(input){
+     display.value += input;
+  }
+  function clearDisplay(input){
+    display.value="";
+  }
+ function calculate(){
+    display.value = eval(display.value)
+ }
+
+
+ </script>
+
+
+
+    
+</body>
+</html>
